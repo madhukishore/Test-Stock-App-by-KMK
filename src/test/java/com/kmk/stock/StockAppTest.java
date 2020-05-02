@@ -61,7 +61,7 @@ public class StockAppTest {
 	public void testGivenInvalidStockData_shouldThrowException() {
 		thrown.expect(InvalidValException.class);
 	    thrown.expectMessage("Invalid value of Last Dividend");
-	    StockModel invalidStockDetail  = new StockModel("POP", StockEnum.COMMON, -9.0, -0.0, 100.0);
+	    StockModel invalidStockDetail  = new StockModel("POP", StockEnum.COMMON, -8.0, -0.0, 100.0);
 		stockSer.calculateDividendYield(invalidStockDetail, -180.00);
 		
 	}
