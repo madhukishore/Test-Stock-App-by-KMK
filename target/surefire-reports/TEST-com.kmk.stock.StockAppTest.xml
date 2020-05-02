@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kmk.stock.StockAppTest" time="0.317" tests="7" errors="0" skipped="0" failures="0">
+<testsuite name="com.kmk.stock.StockAppTest" time="0.288" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.251-b08"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/madhukaruturi/git/repository/Test Stock App by KMK"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/madhukaruturi/git/Test-Stock-App-by-KMK"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/madhukaruturi/git/repository/Test Stock App by KMK"/>
+    <property name="user.dir" value="/Users/madhukaruturi/git/Test-Stock-App-by-KMK"/>
     <property name="java.runtime.version" value="1.8.0_251-b08"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -25,7 +25,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/madhukaruturi/kmkstock/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf6577961735449925556.tmp"/>
+    <property name="classworlds.conf" value="/Users/madhukaruturi/kmkstock/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf339726401816591895.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/madhukaruturi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -52,7 +52,7 @@
     <property name="java.ext.dirs" value="/Users/madhukaruturi/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Users/madhukaruturi/git/repository/Test Stock App by KMK/EMBEDDED"/>
+    <property name="maven.home" value="/Users/madhukaruturi/git/Test-Stock-App-by-KMK/EMBEDDED"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,11 +61,11 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testGivenValidTradeData_shouldCheckSaveStockTrading" classname="com.kmk.stock.StockAppTest" time="0.249"/>
-  <testcase name="testGivenValidStockData_shouldCheckAllStockIndexValue" classname="com.kmk.stock.StockAppTest" time="0.036"/>
-  <testcase name="testGivenValidStockData_shouldCheckPnERatioValue" classname="com.kmk.stock.StockAppTest" time="0.003"/>
-  <testcase name="testGivenValidTradeData_shouldCheckVolumeWeightedStockPrice_forLast15minsTrades" classname="com.kmk.stock.StockAppTest" time="0.013"/>
+  <testcase name="testGivenValidTradeData_shouldCheckSaveStockTrading" classname="com.kmk.stock.StockAppTest" time="0.231"/>
+  <testcase name="testGivenValidStockData_shouldCheckAllStockIndexValue" classname="com.kmk.stock.StockAppTest" time="0.024"/>
+  <testcase name="testGivenValidStockData_shouldCheckPnERatioValue" classname="com.kmk.stock.StockAppTest" time="0.008"/>
+  <testcase name="testGivenValidTradeData_shouldCheckVolumeWeightedStockPrice_forLast15minsTrades" classname="com.kmk.stock.StockAppTest" time="0.008"/>
   <testcase name="testGivenInvalidStockData_shouldThrowException" classname="com.kmk.stock.StockAppTest" time="0.012"/>
-  <testcase name="testGivenInvalidTradeDetails_shouleThrowException" classname="com.kmk.stock.StockAppTest" time="0.002"/>
+  <testcase name="testGivenInvalidTradeDetails_shouleThrowException" classname="com.kmk.stock.StockAppTest" time="0.003"/>
   <testcase name="testGivenValidStockData_shouldCheckDividendYieldValue" classname="com.kmk.stock.StockAppTest" time="0.002"/>
 </testsuite>
