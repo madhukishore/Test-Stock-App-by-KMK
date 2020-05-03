@@ -18,17 +18,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.kmk.stock.dao.StockDao;
 import com.kmk.stock.dao.TradeDao;
 import com.kmk.stock.exception.InvalidValException;
-import com.kmk.stock.model.StockModel;
 import com.kmk.stock.model.StockEnum;
-import com.kmk.stock.model.TradeModel;
+import com.kmk.stock.model.StockModel;
 import com.kmk.stock.model.TradeEnum;
+import com.kmk.stock.model.TradeModel;
 import com.kmk.stock.service.StockSer;
 import com.kmk.stock.service.TradeSer;
 
 
-/**
- * Unit tests for simple SuperSimpleStockApp.
- */
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {StockConfig.class})
 public class StockAppTest {
@@ -67,7 +64,7 @@ public class StockAppTest {
 	}
 	
 	@Test
-	public void testGivenInvalidTradeDetails_shouleThrowException() {
+	public void testGivenInvalidTradeDetails_shouldThrowException() {
 		thrown.expect(InvalidValException.class);
 	    thrown.expectMessage("A valid stock is required for trading");
 	    TradeModel anInvalidTradeDetails = new TradeModel(TradeEnum.BUY, 0, -100.00, LocalDateTime.now(), null);
@@ -97,7 +94,7 @@ public class StockAppTest {
 		StockModel sampleStockDetailsForGIN = stockDao.findByStockSymbol("GIN");
 		double dividendYieldForGIN = stockSer.calculateDividendYield(sampleStockDetailsForGIN, 90) ;
 		double pAndERationForGIN = stockSer.calculatePriceToEarningRatio(90, dividendYieldForGIN);
-		assertThat(pAndERationForGIN, is(405.0));//0.0
+		assertThat(pAndERationForGIN, is(405.0));
 		
 		
 	}
@@ -113,15 +110,6 @@ public class StockAppTest {
 		assertThat(tradeDao.getAllTrades().size(), is(2));
 		assertThat(tradeDao.getAllTrades().stream().filter(trade -> trade.getType().equals(TradeEnum.BUY)).count(), is(1L));
 		assertThat(tradeDao.getAllTrades().stream().filter(trade -> trade.getType().equals(TradeEnum.SELL)).count(), is(1L));
-		
-	}
-	/**
-	 * this method takes given stock with their market price and evaluates allStockIndexValue and assertWithExpectedValue
-	 */
-	@Test
-	public void testGivenValidStockData_shouldCheckAllStockIndexValue() {
-		double allShareIndexValue = Math.round(stockSer.allShareIndex(stockKeyAndStockMap) * 100D) / 100D;
-		assertThat(allShareIndexValue, is(3.62));
 		
 	}
 	
@@ -140,4 +128,13 @@ public class StockAppTest {
 		assertThat(volumeWeightedStockPrice, is(60.0));
 	}
 	
+	/**
+	 * this method takes given stock with their market price and evaluates allStockIndexValue and assertWithExpectedValue
+	 */
+	@Test
+	public void testGivenValidStockData_shouldCheckAllStockIndexValue() {
+		double allShareIndexValue = Math.round(stockSer.allShareIndex(stockKeyAndStockMap) * 100D) / 100D;
+		assertThat(allShareIndexValue, is(3.62));
+		
+	}
 }

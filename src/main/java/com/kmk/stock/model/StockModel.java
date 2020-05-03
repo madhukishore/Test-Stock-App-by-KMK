@@ -2,11 +2,11 @@ package com.kmk.stock.model;
 
 public class StockModel {
 
-	private final String stockSymbol; // unique representation for a stock
+	private final String stockSymbol; 
 	private final StockEnum type; 
 	private final Double lastDividend;
 	private final Double fixedDividend;
-	private final Double parValue; // price at the time of purchase
+	private final Double parValue; 
 	
 	public StockModel(final String stockSymbol, final StockEnum type, final Double lastDividend, final Double fixedDividend, final Double parValue) {
 		super();

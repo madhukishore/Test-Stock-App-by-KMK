@@ -13,12 +13,11 @@ import com.kmk.stock.model.TradeEnum;
 
 @Repository
 public class TradeDao {
-
 	
 	private List<TradeModel> tradeModels;
 
 	/**
-	 * This method saves a trade in the memory using ArrayList
+	 * Saves a trade in the memory using ArrayList
 	 */
 	
 	public void addTrade(TradeModel tradeModel) {
@@ -29,7 +28,7 @@ public class TradeDao {
 	}
 
 	/**
-	 * This method retrieve all trades in the memory using ArrayList
+	 * Retrieve all trades in the memory using ArrayList
 	 */
 	
 	public List<TradeModel> getAllTrades() {
@@ -38,7 +37,7 @@ public class TradeDao {
 	
 	
 	/**
-	 * This method retrieve all trades from the memory for a particular stock
+	 * Retrieve all trades from the memory for a particular stock
 	 */
 	
 	public List<TradeModel> getTradesByStockSymbol(String stockSymbol) {
@@ -60,6 +59,4 @@ public class TradeDao {
 	public TradeModel getAnInvalidTrade() {
 		return new TradeModel(TradeEnum.BUY, 0, -100.00, LocalDateTime.now(), null);
 	}
-	
 }
-

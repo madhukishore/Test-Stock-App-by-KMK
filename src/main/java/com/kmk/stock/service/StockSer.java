@@ -11,5 +11,4 @@ public interface StockSer {
 	public double calculatePriceToEarningRatio(double marketPrice, double dividendYield);
 	
 	public Double allShareIndex(Map<String, StockModel> stockModels);
-	
 }

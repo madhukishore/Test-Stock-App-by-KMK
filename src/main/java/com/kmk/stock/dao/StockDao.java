@@ -17,11 +17,10 @@ public class StockDao {
 				"ALE", new StockModel("ALE", StockEnum.COMMON, 23.0, 0.0, 60.0), 
 				"GIN", new StockModel("GIN", StockEnum.PREFERRED, 8.0, 0.2, 100.0), 
 				"JOE", new StockModel("JOE", StockEnum.COMMON, 13.0, 0.0, 250.0));
-
 	}
 	
 	/*
-	 * This method returns the map of Stock symbol and current market price of the stock
+	 * Map of Stock symbol and current market price of the stock
 	 */
 	public Map<String, Double> getStockMarketPriceMap() {
 		return ImmutableMap.of("TEA", 100.10, 
@@ -34,13 +33,12 @@ public class StockDao {
 	public StockModel findByStockSymbol(String stockSymbol) {
 		return getSymbolAndStockMap().get(stockSymbol);
 	}
+	
 	public Double findMarketPriceByStockSymbol(String stockSymbol) {
 		return getStockMarketPriceMap().get(stockSymbol);
 	}
 	
 	public StockModel getAnInvalidStock() {
 		return new StockModel("POP", StockEnum.COMMON, -8.0, -0.0, 100.0);
-	}
-	
-	
+	}	
 }

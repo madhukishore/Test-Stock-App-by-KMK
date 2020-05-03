@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 import com.google.common.collect.ImmutableList;
 import com.kmk.stock.dao.StockDao;
 import com.kmk.stock.exception.InvalidValException;
-import com.kmk.stock.model.StockModel;
 import com.kmk.stock.model.StockEnum;
+import com.kmk.stock.model.StockModel;
 import com.kmk.stock.service.StockSer;
 
 @Service
@@ -28,7 +28,7 @@ public class StockSerImpl implements StockSer {
 	}
 	
 	/**
-	 * this method evaluates dividend yield for a stock and its market price
+	 * Dividend yield for a stock and its market price
 	 */
 	@Override
 	public double calculateDividendYield(StockModel stockModel, double marketPrice) {
@@ -45,7 +45,7 @@ public class StockSerImpl implements StockSer {
 	}
 	
 	/**
-	 * this method evaluates P/E ratio for a market price and dividend value
+	 * P/E ratio for a market price and dividend value
 	 */
 	
 	@Override
@@ -61,7 +61,7 @@ public class StockSerImpl implements StockSer {
 	}
 	
 	/**
-	 * this method evaluates all share index for all the stocks 
+	 * All share index for all the stocks 
 	 */
 	@Override
 	public Double allShareIndex(Map<String, StockModel> stockModels) {
@@ -76,8 +76,7 @@ public class StockSerImpl implements StockSer {
 	
 
 	/**
-	 * this method validate basic stock details like Par value, Last Dividend, Fixed Dividend
-	 * & for stock market price
+	 * Validate basic stock details like Par value, Last Dividend, Fixed Dividend & for stock market price
 	 */
 	private void validateStockDetails(List<StockModel> stockModels, List<Double> stockMarketPrices) {
 		

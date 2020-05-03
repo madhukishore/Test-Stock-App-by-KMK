@@ -36,6 +36,5 @@ public class TradeModel {
 	
 	public StockModel getStock() {
 		return stockModel;
-	}
-		
+	}		
 }

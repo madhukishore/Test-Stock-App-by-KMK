@@ -18,22 +18,18 @@ import com.kmk.stock.service.TradeSer;
 @Service
 public class TradeSerImpl implements TradeSer {
 
-	//can be made configurable 
-    private int stockTradesFetchRangeInMins = 15;
+	private int stockTradesFetchRangeInMins = 15;
 	private final TradeDao tradeDao;
-	
 	
 	@Autowired
     public TradeSerImpl(final TradeDao tradeDao) {
 		this.tradeDao = tradeDao;
     }
-
 	
 	private static Logger LOGGER = LoggerFactory.getLogger(StockSerImpl.class);
 	
 	/**
-	 * this method evaluate volume weighted average stock price of trades happened 
-	 * between now and last 15 minutes. This time is configurable in application.properties file
+	 * Evaluate volume weighted average stock price of trades happened between now and last 15 minutes.
 	 */
 	@Override
 	public double calculateVolumeWeightedStockPriceInTimeRange() {
@@ -48,10 +44,8 @@ public class TradeSerImpl implements TradeSer {
 					.mapToDouble( trade -> trade.getQuantity() * trade.getPrice()).sum();
 			
 		return volumeWeigthedStockPrice / totalQuantity;
-		
 	}
 	
-
 	@Override
 	public void addStockTrade(TradeModel tradeModel) {
 		validateStockTrade(tradeModel);
@@ -65,10 +59,7 @@ public class TradeSerImpl implements TradeSer {
 	}
 	
 	/**
-	 * 
-	 * @param dateTime
-	 * @param durationInMinutes
-	 * @return list of trades after filtering between now dateTime and time specified in mins
+	 * Returns list of trades after filtering between now dateTime and time specified in mins
 	 */
 	@VisibleForTesting
 	List<TradeModel> getTradesBetweenDuration(LocalDateTime dateTime, long durationInMinutes) {
@@ -81,8 +72,7 @@ public class TradeSerImpl implements TradeSer {
 	
 	
 	/**
-	 * this method validates a stock trade
-	 * @param tradeModel
+	 * To validate a stock trade
 	 */
 	private void validateStockTrade(TradeModel tradeModel) {
 		LOGGER.info("Validating a stock trade details");
